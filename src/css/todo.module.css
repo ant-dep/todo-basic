@@ -1,0 +1,33 @@
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 50px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+.input {
+  cursor: pointer;
+}
+
+.todoContent {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.delete {
+  color: darkorange;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.delete:hover {
+  transform: scale(1.2);
+}
