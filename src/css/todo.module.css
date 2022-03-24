@@ -13,8 +13,16 @@
   cursor: pointer;
 }
 
-.todoContent {
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+}
+
+.content {
+  text-align: left;
+  min-width: 50%;
 }
 
 .completed {
@@ -30,4 +38,18 @@
 
 .delete:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .inputContainer {
+    padding: 0;
+  }
+
+  .contentContainer {
+    padding: 0 10px;
+  }
+
+  .content {
+    min-width: 80%;
+  }
 }

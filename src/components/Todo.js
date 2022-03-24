@@ -27,9 +27,11 @@ export default function Todo({ todo }) {
         checked={isChecked}
         onChange={checkHandler}
       />
-      <p className={`${isChecked && styles.completed} ${styles.todoContent}`}>
-        {todo.content}
-      </p>
+      <div className={styles.contentContainer}>
+        <p className={`${isChecked && styles.completed} ${styles.content}`}>
+          {todo.content}
+        </p>
+      </div>
       <AiFillDelete
         className={styles.delete}
         onClick={() => {

@@ -9,6 +9,11 @@ const initialState = {
     },
     {
       id: 2,
+      content: "en espérant que vous validiez...",
+      isCompleted: false,
+    },
+    {
+      id: 3,
       content: "get a review",
       isCompleted: false,
     },

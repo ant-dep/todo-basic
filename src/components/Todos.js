@@ -18,7 +18,7 @@ export default function Todos() {
         <input
           className={styles.input}
           type="text"
-          placeholder="Veuillez renseiger une nouvelle tâche"
+          placeholder="Veuillez renseigner une nouvelle tâche"
           onChange={(e) => {
             setNewTodo({
               id: todos.length + 1,
