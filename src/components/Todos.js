@@ -1,13 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectTodo, setTodo } from "../redux/todoReducer";
 import Todo from "./Todo";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "../css/todos.module.css";
 
 export default function Todos() {
   const todos = useSelector(selectTodo);
   const dispatch = useDispatch();
   const [newTodo, setNewTodo] = useState();
+  const inputRef = useRef(null);
 
   return (
     <>
@@ -19,6 +20,7 @@ export default function Todos() {
           className={styles.input}
           type="text"
           placeholder="Veuillez renseigner une nouvelle tâche"
+          ref={inputRef}
           onChange={(e) => {
             setNewTodo({
               id: todos.length + 1,
@@ -32,6 +34,7 @@ export default function Todos() {
           onClick={() => {
             console.log(newTodo, "newTodo");
             dispatch(setTodo(newTodo));
+            inputRef.current.value = "";
           }}
         >
           Ajouter
